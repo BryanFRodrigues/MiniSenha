@@ -15,11 +15,13 @@ import java.awt.*;
 
 public class Configuracao {
   private JPanel configuracaoPanel;
-  private Integer selecionarPinosSenhas = 4;
-  private Integer selecionarTentativas = 5;
+  private Integer selecionarPinosSenhas;
+  private Integer selecionarTentativas;
 
   public Configuracao(Integer pinoSenha, Integer tentativa) {
     // Criando painel de configuração
+    this.selecionarPinosSenhas = pinoSenha;
+    this.selecionarTentativas = tentativa;
     this.configuracaoPanel = new JPanel();
     configuracaoPanel.setBorder(BorderFactory.createTitledBorder("Configuração"));
     configuracaoPanel.setLayout(new GridLayout(8, 1));
